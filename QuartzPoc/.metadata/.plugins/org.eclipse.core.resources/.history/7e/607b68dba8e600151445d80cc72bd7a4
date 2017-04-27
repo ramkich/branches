@@ -1,0 +1,15 @@
+package com.cgi.nm.radius.poc;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+	
+		   
+		        String test = "http://yahoo.com";
+		        System.out.println(test.matches("^(http|https|ftp)://"));
+		   
+		    
+	}
+
+}

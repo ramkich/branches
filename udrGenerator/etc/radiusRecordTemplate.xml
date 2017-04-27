@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="marketPropertiesConfigurator" class="com.cgi.nm.util.testTools.MarketPropertyConfiguratorImpl">
+        <property name="outputFilesCount" value="1" />
+        <property name="outputDirectories" value="toroon63aaan05,toroon63aaan06,toroon63aaan07,toroon63aaan08,toroon63aarn02,toroondcaaan05,toroondcaaan06,toroondcaaan07,toroondcaaan08,toroondcaarn02" />
+        <property name="radiusCARFilesDirectory" value="D:/Test" />
+    </bean>
+    
+    <bean id="hse-sympatico" class="com.cgi.nm.util.testTools.AcctTosImpl">
+        <property name="userBase" value="b1" />
+        <property name="userDomain" value="sympatico.ca" />
+        <property name="baseIpAddress" value="163" />
+        <property name="template">
+            <value>
+{0,date,EEE, dd MMM yyyy HH:mm:ss.SSS}
+        User-Name = {1}
+        NAS-IP-Address = {2}
+        NAS-Port = 1085
+        Service-Type = Framed
+        Framed-IP-Address = {2}
+        Framed-IP-Netmask = 255.255.255.128
+        Vendor-Specific = 00:00:13:0a:2a:06:00:00:00:00
+        Vendor-Specific = 00:00:13:0a:2b:06:00:00:00:00
+        Vendor-Specific = 00:00:0d:e9:02:1a:72:64:68:63:70:61:6c:75:34:40:6e:62:2e:61:6c:69:61:6e:74:2e:64:68:63:70
+        NAS-Identifier = BA02-mx960BRAS-lab01-re0
+        Acct-Status-Type = {3}
+        Acct-Delay-Time = 0
+        Acct-Input-Octets = {4}
+        Acct-Output-Octets = {5}
+        Acct-Session-Id = jnpr demux0.{6}:14721
+        Acct-Multi-Session-Id = FCA159{6}55CD0550
+        Acct-Authentic = RADIUS
+        Acct-Session-Time = 763181
+        Acct-Input-Packets = 78096
+        Acct-Output-Packets = 77726
+        Acct-Input-Gigawords = 0
+        Acct-Output-Gigawords = 0
+        Event-Timestamp = {7}
+        NAS-Port-Type = Ethernet
+        Unisphere-Egress-Policy-Name = pl-res-fib-egress
+        Unisphere-IPv6-Acct-Output-Gigawords = 0
+        NAS-Port-ID = ae0.demux0.1073741910:101-1085
+        Unisphere-DHCP-MAC-Address = 0015.05fc.052a
+        Framed-IPv6-Pool = d-res-fib-ipv6
+        Unisphere-IPv6-Acct-Input-Gigawords = 0
+        Unisphere-IPv6-Acct-Output-Packets = 0        
+        Unisphere-IPv6-Acct-Input-Packets = 0
+        Unisphere-IPv6-Ingress-Policy-Name = pl-res-fib-ingress-inet6
+        Unisphere-IPv6-Acct-Output-Octets = 0
+        Unisphere-IPv6-Acct-Input-Octets = 0
+        DSLF-Agent-Circuit-Id = 7342STJH-2 PON 1/1/01/03:21.1.1
+        Unisphere-Ingress-Policy-Name = pl-res-fib-ingress
+        Acct-TOS = hse-sympatico
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="hse-atlantic" class="com.cgi.nm.util.testTools.AcctTosImpl">
+        <property name="userBase" value="sim" />
+        <property name="userDomain" value="nb.aliant.dhcp" />
+        <property name="baseIpAddress" value="158" />
+        <property name="template">
+            <value>
+{0,date,EEE, dd MMM yyyy HH:mm:ss.SSS}
+        User-Name = {1}
+        NAS-IP-Address = {2}
+        NAS-Port = 1085
+        Service-Type = Framed
+        Framed-IP-Address = {2}
+        Framed-IP-Netmask = 255.255.255.128
+        Vendor-Specific = 00:00:13:0a:2a:06:00:00:00:00
+        Vendor-Specific = 00:00:13:0a:2b:06:00:00:00:00
+        Vendor-Specific = 00:00:0d:e9:02:1a:72:64:68:63:70:61:6c:75:34:40:6e:62:2e:61:6c:69:61:6e:74:2e:64:68:63:70
+        NAS-Identifier = BA02-mx960BRAS-lab01-re0
+        Acct-Status-Type = {3}
+        Acct-Delay-Time = 0
+        Acct-Input-Octets = {4}
+        Acct-Output-Octets = {5}
+        Acct-Session-Id = jnpr demux0.{6}:14721
+        Acct-Multi-Session-Id = FCA159{6}55CD0550
+        Acct-Authentic = RADIUS
+        Acct-Session-Time = 763181
+        Acct-Input-Packets = 78096
+        Acct-Output-Packets = 77726
+        Acct-Input-Gigawords = 0
+        Acct-Output-Gigawords = 0
+        Event-Timestamp = {7}
+        NAS-Port-Type = Ethernet
+        Unisphere-Egress-Policy-Name = pl-res-fib-egress
+        Unisphere-IPv6-Acct-Output-Gigawords = 0
+        NAS-Port-ID = ae0.demux0.1073741910:101-1085
+        Unisphere-DHCP-MAC-Address = 0015.05fc.052a
+        Framed-IPv6-Pool = d-res-fib-ipv6
+        Unisphere-IPv6-Acct-Input-Gigawords = 0
+        Unisphere-IPv6-Acct-Output-Packets = 0        
+        Unisphere-IPv6-Acct-Input-Packets = 0
+        Unisphere-IPv6-Ingress-Policy-Name = pl-res-fib-ingress-inet6
+        Unisphere-IPv6-Acct-Output-Octets = 0
+        Unisphere-IPv6-Acct-Input-Octets = 0
+        DSLF-Agent-Circuit-Id = 7342STJH-2 PON 1/1/01/03:21.1.1
+        Unisphere-Ingress-Policy-Name = pl-res-fib-ingress
+        Acct-TOS = hse-atlantic
+            </value>
+        </property>
+    </bean>    
+
+    <bean id="hse-business" class="com.cgi.nm.util.testTools.AcctTosImpl">
+        <property name="userBase" value="hsb" />
+        <property name="userDomain" value="bellnet.ca" />
+        <property name="baseIpAddress" value="142" />
+        <property name="template">
+            <value>
+{0,date,EEE, dd MMM yyyy HH:mm:ss.SSS}
+        User-Name = {1}
+        NAS-IP-Address = {2}
+        NAS-Port = 1085
+        Service-Type = Framed
+        Framed-IP-Address = {2}
+        Framed-IP-Netmask = 255.255.255.128
+        Vendor-Specific = 00:00:13:0a:2a:06:00:00:00:00
+        Vendor-Specific = 00:00:13:0a:2b:06:00:00:00:00
+        Vendor-Specific = 00:00:0d:e9:02:1a:72:64:68:63:70:61:6c:75:34:40:6e:62:2e:61:6c:69:61:6e:74:2e:64:68:63:70
+        NAS-Identifier = BA02-mx960BRAS-lab01-re0
+        Acct-Status-Type = {3}
+        Acct-Delay-Time = 0
+        Acct-Input-Octets = {4}
+        Acct-Output-Octets = {5}
+        Acct-Session-Id = jnpr demux0.{6}:14721
+        Acct-Multi-Session-Id = FCA159{6}55CD0550
+        Acct-Authentic = RADIUS
+        Acct-Session-Time = 763181
+        Acct-Input-Packets = 78096
+        Acct-Output-Packets = 77726
+        Acct-Input-Gigawords = 0
+        Acct-Output-Gigawords = 0
+        Event-Timestamp = {7}
+        NAS-Port-Type = Ethernet
+        Unisphere-Egress-Policy-Name = pl-res-fib-egress
+        Unisphere-IPv6-Acct-Output-Gigawords = 0
+        NAS-Port-ID = ae0.demux0.1073741910:101-1085
+        Unisphere-DHCP-MAC-Address = 0015.05fc.052a
+        Framed-IPv6-Pool = d-res-fib-ipv6
+        Unisphere-IPv6-Acct-Input-Gigawords = 0
+        Unisphere-IPv6-Acct-Output-Packets = 0        
+        Unisphere-IPv6-Acct-Input-Packets = 0
+        Unisphere-IPv6-Ingress-Policy-Name = pl-res-fib-ingress-inet6
+        Unisphere-IPv6-Acct-Output-Octets = 0
+        Unisphere-IPv6-Acct-Input-Octets = 0
+        DSLF-Agent-Circuit-Id = 7342STJH-2 PON 1/1/01/03:21.1.1
+        Unisphere-Ingress-Policy-Name = pl-res-fib-ingress
+        Acct-TOS = hse-business
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="hse-virgin" class="com.cgi.nm.util.testTools.AcctTosImpl">
+        <property name="userBase" value="vim" />
+        <property name="userDomain" value="virgin.ca" />
+        <property name="baseIpAddress" value="166" />
+        <property name="template">
+            <value>
+{0,date,EEE, dd MMM yyyy HH:mm:ss.SSS}
+        User-Name = {1}
+        NAS-IP-Address = {2}
+        NAS-Port = 1085
+        Service-Type = Framed
+        Framed-IP-Address = {2}
+        Framed-IP-Netmask = 255.255.255.128
+        Vendor-Specific = 00:00:13:0a:2a:06:00:00:00:00
+        Vendor-Specific = 00:00:13:0a:2b:06:00:00:00:00
+        Vendor-Specific = 00:00:0d:e9:02:1a:72:64:68:63:70:61:6c:75:34:40:6e:62:2e:61:6c:69:61:6e:74:2e:64:68:63:70
+        NAS-Identifier = BA02-mx960BRAS-lab01-re0
+        Acct-Status-Type = {3}
+        Acct-Delay-Time = 0
+        Acct-Input-Octets = {4}
+        Acct-Output-Octets = {5}
+        Acct-Session-Id = jnpr demux0.{6}:14721
+        Acct-Multi-Session-Id = FCA159{6}55CD0550
+        Acct-Authentic = RADIUS
+        Acct-Session-Time = 763181
+        Acct-Input-Packets = 78096
+        Acct-Output-Packets = 77726
+        Acct-Input-Gigawords = 0
+        Acct-Output-Gigawords = 0
+        Event-Timestamp = {7}
+        NAS-Port-Type = Ethernet
+        Unisphere-Egress-Policy-Name = pl-res-fib-egress
+        Unisphere-IPv6-Acct-Output-Gigawords = 0
+        NAS-Port-ID = ae0.demux0.1073741910:101-1085
+        Unisphere-DHCP-MAC-Address = 0015.05fc.052a
+        Framed-IPv6-Pool = d-res-fib-ipv6
+        Unisphere-IPv6-Acct-Input-Gigawords = 0
+        Unisphere-IPv6-Acct-Output-Packets = 0        
+        Unisphere-IPv6-Acct-Input-Packets = 0
+        Unisphere-IPv6-Ingress-Policy-Name = pl-res-fib-ingress-inet6
+        Unisphere-IPv6-Acct-Output-Octets = 0
+        Unisphere-IPv6-Acct-Input-Octets = 0
+        DSLF-Agent-Circuit-Id = 7342STJH-2 PON 1/1/01/03:21.1.1
+        Unisphere-Ingress-Policy-Name = pl-res-fib-ingress
+        Acct-TOS = hse-virgin
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="hse-wholesale" class="com.cgi.nm.util.testTools.AcctTosImpl">
+        <property name="userBase" value="ws" />
+        <property name="userDomain" value="wholesale.ca" />
+        <property name="baseIpAddress" value="167" />
+        <property name="template">
+            <value>
+{0,date,EEE, dd MMM yyyy HH:mm:ss.SSS}
+        User-Name = {1}
+        NAS-IP-Address = {2}
+        NAS-Port = 1085
+        Service-Type = Framed
+        Framed-IP-Address = {2}
+        Framed-IP-Netmask = 255.255.255.128
+        Vendor-Specific = 00:00:13:0a:2a:06:00:00:00:00
+        Vendor-Specific = 00:00:13:0a:2b:06:00:00:00:00
+        Vendor-Specific = 00:00:0d:e9:02:1a:72:64:68:63:70:61:6c:75:34:40:6e:62:2e:61:6c:69:61:6e:74:2e:64:68:63:70
+        NAS-Identifier = BA02-mx960BRAS-lab01-re0
+        Acct-Status-Type = {3}
+        Acct-Delay-Time = 0
+        Acct-Input-Octets = {4}
+        Acct-Output-Octets = {5}
+        Acct-Session-Id = jnpr demux0.{6}:14721
+        Acct-Multi-Session-Id = FCA159{6}55CD0550
+        Acct-Authentic = RADIUS
+        Acct-Session-Time = 763181
+        Acct-Input-Packets = 78096
+        Acct-Output-Packets = 77726
+        Acct-Input-Gigawords = 0
+        Acct-Output-Gigawords = 0
+        Event-Timestamp = {7}
+        NAS-Port-Type = Ethernet
+        Unisphere-Egress-Policy-Name = pl-res-fib-egress
+        Unisphere-IPv6-Acct-Output-Gigawords = 0
+        NAS-Port-ID = ae0.demux0.1073741910:101-1085
+        Unisphere-DHCP-MAC-Address = 0015.05fc.052a
+        Framed-IPv6-Pool = d-res-fib-ipv6
+        Unisphere-IPv6-Acct-Input-Gigawords = 0
+        Unisphere-IPv6-Acct-Output-Packets = 0        
+        Unisphere-IPv6-Acct-Input-Packets = 0
+        Unisphere-IPv6-Ingress-Policy-Name = pl-res-fib-ingress-inet6
+        Unisphere-IPv6-Acct-Output-Octets = 0
+        Unisphere-IPv6-Acct-Input-Octets = 0
+        DSLF-Agent-Circuit-Id = 7342STJH-2 PON 1/1/01/03:21.1.1
+        Unisphere-Ingress-Policy-Name = pl-res-fib-ingress
+        Acct-TOS = hse-wholesale
+            </value>
+        </property>
+    </bean>    
+
+</beans>

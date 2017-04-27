@@ -1,0 +1,14 @@
+package com.cgi.nm.radius.poc;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		String test = "@Test,@Test1";
+		System.out.println(test.matches("^@?$")); 
+
+
+	}
+
+}
+ 	
